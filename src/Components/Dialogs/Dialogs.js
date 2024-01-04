@@ -1,7 +1,7 @@
 import s from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
-import { sendMessageCreater, updateNewMessageBodyCreator } from '../../redux/state';
+import { sendMessageCreater, updateNewMessageBodyCreator } from '../../redux/dialogsReducer';
 
 const Dialogs = (props) => {
 
