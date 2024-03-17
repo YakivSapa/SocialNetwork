@@ -30,6 +30,7 @@ export const getAuthUserData = () => (dispatch) => {
             dispatch(setAuthUserData(id, email, login, true));
         }
     });
+    return "Testing-testing";
 }
 
 export const login = (email, password, rememberMe) => (dispatch) => {
