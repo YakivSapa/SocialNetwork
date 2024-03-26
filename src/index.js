@@ -1,31 +1,35 @@
 import reportWebVitals from './reportWebVitals';
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+// import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './App';
-import store from './redux/redux-store.js';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+// import App from './App';
+// import store from './redux/redux-store.js';
+// import { Provider } from 'react-redux';
+// import { BrowserRouter } from 'react-router-dom';
+import SocialNetwork from './App';
+import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
-const domNode = document.getElementById('root');
-const root = createRoot(domNode);
+// const domNode = document.getElementById('root');
+// const root = createRoot(domNode);
 
-let rerenderEntireTree = (state) => {
-    root.render(   // root / ReactDOM
-        <BrowserRouter>
-            <Provider store={store}>
-                <App />
-            </Provider>
-        </BrowserRouter>
-    );
-}
+// let rerenderEntireTree = (state) => {
+//     root.render(   // root / ReactDOM
+//         <BrowserRouter>
+//             <Provider store={store}>
+//             </Provider>
+//         </BrowserRouter>
+//     );
+// }
 
-rerenderEntireTree(store.getState());
+ReactDOM.render(<SocialNetwork />, document.getElementById('root'));
 
-store.subscribe(() => {
-    let state = store.getState();
-    rerenderEntireTree(state);
-});
+// rerenderEntireTree(store.getState());
+
+// store.subscribe(() => {
+//     let state = store.getState();
+//     rerenderEntireTree(state);
+// });
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
