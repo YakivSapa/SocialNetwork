@@ -1,4 +1,4 @@
-import React, { Component, lazy } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import News from './Components/News/News';
@@ -23,8 +23,16 @@ const DialogsContainerWithSuspense = withSuspense(DialogsContainer);
 const ProfileContainerWithSuspense = withSuspense(ProfileContainer);
 
 class App extends Component {
+  catchAllUnhandledErrors = (reason, promise) => {
+    alert("Some error occured");
+  }
+
   componentDidMount() {
     this.props.initializeApp();
+    window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
   }
   render() {
     if (!this.props.initialized) {
@@ -43,6 +51,7 @@ class App extends Component {
             <Route path="/news" element={<News />} />
             <Route path="/music" element={<Music />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path='*' element={<div>404 NOT FOUND</div>} />
           </Routes>
         </div>
       </div>
