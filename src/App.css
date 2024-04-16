@@ -11,6 +11,10 @@
 }
 
 .app-wrapper-content {
-  background-color: cornflowerblue;
+  background-color: #182c60;
   grid-area: c;
+}
+
+body {
+  background-color: #101833;
 }

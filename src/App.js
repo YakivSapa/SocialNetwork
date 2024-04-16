@@ -15,12 +15,13 @@ import { initializeApp } from './redux/appReducer';
 import Preloader from './Components/common/Preloader/preloader';
 import store from './redux/redux-store';
 import { withSuspense } from './hoc/suspence';
+import ProfileContainer from './Components/Profile/ProfileContainer'
 
 
 const DialogsContainer = React.lazy(() => import('./Components/Dialogs/DialogsContainer'));
-const ProfileContainer = React.lazy(() => import('./Components/Profile/ProfileContainer'));
+// const ProfileContainer = React.lazy(() => import('./Components/Profile/ProfileContainer'));
 const DialogsContainerWithSuspense = withSuspense(DialogsContainer);
-const ProfileContainerWithSuspense = withSuspense(ProfileContainer);
+// const ProfileContainerWithSuspense = withSuspense(ProfileContainer);
 
 class App extends Component {
   catchAllUnhandledErrors = (reason, promise) => {
@@ -45,7 +46,7 @@ class App extends Component {
         <div className="app-wrapper-content">
           <Routes>
             <Route path="/dialogs/*" element={<DialogsContainerWithSuspense />} />
-            <Route path="/profile/:userId?*" element={<ProfileContainerWithSuspense />} />
+            <Route path="/profile/:userId?*" element={<ProfileContainer />} />
             <Route path="/users" element={<UsersContainer />} />
             <Route path="/login" element={<Login />} />
             <Route path="/news" element={<News />} />
