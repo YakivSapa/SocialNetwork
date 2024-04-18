@@ -17,6 +17,10 @@
     text-decoration: none;
 }
 
+.item:hover {
+    color: #ffff02;
+}
+
 .navItems a:hover {
     background-color: #0b142d;
 }

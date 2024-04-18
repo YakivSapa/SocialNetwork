@@ -5,10 +5,6 @@ import style from "../../common/FormsControls/FormsControls.module.css"
 
 const ProfileDataForm = ({ handleSubmit, profile, error }) => {
     return <form onSubmit={handleSubmit}>
-        <div><button>Save</button></div>
-        {error && <div className={style.formSummaryError}>
-            {error}
-        </div>}
         <div>
             <b>Full name: </b> {createField("Full name", "fullName", [], Input)}
         </div>
@@ -29,6 +25,10 @@ const ProfileDataForm = ({ handleSubmit, profile, error }) => {
                 </div>
             })}
         </div>
+        {error && <div className={style.formSummaryError}>
+            {error}
+        </div>}
+        <div><button className={s.button}>Save</button></div>
     </form>
 }
 
