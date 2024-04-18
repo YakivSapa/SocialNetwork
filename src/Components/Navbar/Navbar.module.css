@@ -1,15 +1,27 @@
 .nav {
     grid-area: n;
     background-color: #111f47;
-    padding: 20px;
+    position: relative;
+    text-align: center;
+    /* padding: 20px; */
+}
+
+.navItems a {
+    height: 7vh;
+    text-align: center;
+    display: block;
 }
 
 .item {
-    color: white;
+    color: #a3a300;
     text-decoration: none;
 }
 
+.navItems a:hover {
+    background-color: #0b142d;
+}
+
 .active {
-    color: gold;
+    color: #ffff02;
     text-decoration: none;
 }
