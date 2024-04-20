@@ -2,3 +2,13 @@
     width: 100px;
     height: 100px;
 }
+
+.userList {
+    width: 20%;
+    margin: auto;
+    padding-top: 5vh;
+}
+
+.userSpace {
+    padding-bottom: 3vh;
+}
