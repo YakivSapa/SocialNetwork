@@ -1,13 +1,45 @@
 .paginator {
-    margin: 10px;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .pageNumber {
-    padding: 2px;
+    padding: 5px;
     border: 1px solid grey;
+    cursor: pointer;
+}
+
+.pageNumber:hover {
+    background-color: #ffff02;
+
 }
 
 .pageNumber.selectedPage {
     font-weight: bold;
     border-color: black;
+    background-color: #ffff02;
+}
+
+.button {
+    position: relative;
+    padding: 4px 7px;
+    font-size: 1rem;
+    color: #111f47;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    text-shadow: 0 0 15px black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+}
+
+.button:hover {
+    color: #a3a300;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px black;
 }

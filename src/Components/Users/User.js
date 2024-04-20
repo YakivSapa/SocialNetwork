@@ -11,6 +11,10 @@ let User = ({ user, followingInProgress, unfollow, follow }) => {
                     <img src={user.photos.small != null ? user.photos.small : userPhoto} className={styles.userPhoto} />
                 </NavLink>
             </div>
+            <span>
+                <div>{user.name}</div>
+                <div>{user.status}</div>
+            </span>
             <div>
                 {user.followed
                     ? <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
@@ -22,16 +26,10 @@ let User = ({ user, followingInProgress, unfollow, follow }) => {
                 }
             </div>
         </span>
-        <span>
-            <span>
-                <div>{user.name}</div>
-                <div>{user.status}</div>
-            </span>
-            <span>
+        {/* <span>
                 <div>{"user.location.country"}</div>
                 <div>{"user.location.city"}</div>
-            </span>
-        </span>
+            </span> */}
     </div>
 }
 
