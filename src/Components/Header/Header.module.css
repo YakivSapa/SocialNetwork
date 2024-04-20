@@ -3,14 +3,32 @@
     background-color: #1b2956;
 }
 
-.header img {
-    width: 20px;
-}
-
 .loginBlock {
     float: right;
+    width: 20%;
+    padding-top: 10px;
 }
 
 .loginBlock a {
     color: white;
+}
+
+.button {
+    position: relative;
+    padding: 4px 7px;
+    font-size: 1.1rem;
+    color: #111f47;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    text-shadow: 0 0 15px black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+}
+
+.button:hover {
+    color: #a3a300;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px black;
 }
