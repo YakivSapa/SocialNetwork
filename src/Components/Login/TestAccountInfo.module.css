@@ -1,0 +1,9 @@
+.text {
+    background-color: #a3a300;
+    position: relative;
+    border: black solid 1px;
+    border-radius: 5px;
+    width: 40%;
+    margin: auto;
+    top: 2vh;
+}
