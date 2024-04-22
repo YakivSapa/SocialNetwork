@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Users.module.css';
 import userPhoto from '../../assets/images/default-profile-pic.jpg'
 import { NavLink } from 'react-router-dom';
+import s from '../Dialogs/Dialogs.module.css';
 
 let User = ({ user, followingInProgress, unfollow, follow }) => {
     return <div className={styles.userSpace}>
@@ -17,10 +18,10 @@ let User = ({ user, followingInProgress, unfollow, follow }) => {
             </span>
             <div>
                 {user.followed
-                    ? <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+                    ? <button className={s.button} disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
                         unfollow(user.id);
                     }}>Unfollow</button>
-                    : <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+                    : <button className={s.button} disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
                         follow(user.id);
                     }}>Follow</button>
                 }

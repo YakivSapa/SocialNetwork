@@ -3,13 +3,24 @@
     grid-template-columns: 2fr 10fr;
 }
 
+.dialog {
+    text-decoration: none;
+    color: #a3a300;
+}
+
+.dialog:hover {
+    color: #ffff02;
+}
+
 .dialogsItems {
     padding: 10px;
     color: white;
+    background-color: #0f1838;
 }
 
-.dialogsItems .active {
-    color: gold;
+.active {
+    color: #ffff02;
+    text-decoration: none;
 }
 
 .messages {
@@ -18,5 +29,42 @@
 
 .messages .message {
     color: white;
-    text-decoration: none;
+}
+
+.form {
+    grid-column-start: 2;
+}
+
+.textarea {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+}
+
+.button {
+    font-size: large;
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    border: none;
+    background-color: #1b377c;
+    color: #a3a300;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.button:hover {
+    color: #ffff02;
+    background-color: #142654;
+}
+
+.textForm {
+    display: flex;
 }

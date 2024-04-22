@@ -4,6 +4,7 @@ import Post from './Post/Post';
 import { Field, reduxForm } from 'redux-form';
 import { maxLengthCreator, required } from '../../utils/validators/validators';
 import { Textarea } from '../../common/FormsControls/FormsControls';
+import styles from '../../Dialogs/Dialogs.module.css';
 
 const MyPosts = React.memo(props => {
     let PostsElements = props.posts.map(p => <Post message={p.message} likeCount={p.likesCount} key={p.id} />
@@ -30,13 +31,13 @@ let maxLength = maxLengthCreator(10);
 
 const AddPostForm = (props) => {
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={props.handleSubmit} className={styles.textForm}>
             <div>
-                <Field component={Textarea} name='newPostText' placeholder='Write a post...' value={props.newPostText}
+                <Field className={styles.textarea} component={Textarea} name='newPostText' placeholder='Write a post...' value={props.newPostText}
                     validate={[required, maxLength]} />
             </div>
             <div>
-                <button>Add Post</button>
+                <button className={styles.button}>Add Post</button>
             </div>
         </form>
     )
