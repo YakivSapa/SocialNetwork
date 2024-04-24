@@ -5,6 +5,7 @@ import s from './Users.module.css';
 
 let Users = ({ currentPage, totalUsersCount, pageSize, onPageChanged, users, ...props }) => {
     return <div>
+        <p className={s.usersCount}>Users count: {totalUsersCount}</p>
         <Paginator currentPage={currentPage} onPageChanged={onPageChanged}
             totalItemsCount={totalUsersCount} pageSize={pageSize} />
         <div className={s.userList}>

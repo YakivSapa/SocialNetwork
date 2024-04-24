@@ -12,3 +12,12 @@
 .userSpace {
     padding-bottom: 3vh;
 }
+
+.usersCount {
+    float: right;
+    text-transform: uppercase;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #a3a300;
+}
