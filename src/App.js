@@ -11,7 +11,7 @@ import Login from './Components/Login/Login';
 import { compose } from 'redux';
 import withRouter from './Components/Profile/WithRouter';
 import { Provider, connect } from 'react-redux';
-import { initializeApp } from './redux/appReducer';
+import { initializeApp } from './redux/appReducer.ts';
 import Preloader from './Components/common/Preloader/preloader';
 import store from './redux/redux-store';
 import { withSuspense } from './hoc/suspence';

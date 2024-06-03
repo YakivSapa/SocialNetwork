@@ -6,7 +6,7 @@ import usersReducer from "./usersReducer";
 import authReducer from "./authReducer";
 import { thunk as thunkMiddleware } from "redux-thunk";
 import { reducer as formReducer } from "redux-form";
-import appReducer from "./appReducer";
+import appReducer from "./appReducer.ts";
 import { compose } from "redux";
 
 let reducers = combineReducers({
