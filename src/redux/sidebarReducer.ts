@@ -1,6 +1,6 @@
 let initialState = {};
-
-const sidebarReducer = (state = initialState, action) => {
+type InitialStateType = typeof initialState
+const sidebarReducer = (state = initialState, action: any) => {
     let stateCopy = { ...state };
     return stateCopy;
 }
