@@ -5,7 +5,7 @@ import News from './Components/News/News';
 import Music from './Components/Music/Music';
 import Settings from './Components/Settings/Settings';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import UsersContainer from './Components/Users/UsersContainer';
+import UsersContainer from './Components/Users/UsersContainer.tsx';
 import HeaderContainer from './Components/Header/HeaderContainer';
 import Login from './Components/Login/Login';
 import { compose } from 'redux';
@@ -13,7 +13,7 @@ import withRouter from './Components/Profile/WithRouter';
 import { Provider, connect } from 'react-redux';
 import { initializeApp } from './redux/appReducer.ts';
 import Preloader from './Components/common/Preloader/preloader';
-import store from './redux/redux-store';
+import store from './redux/redux-store.ts';
 import { withSuspense } from './hoc/suspence';
 import ProfileContainer from './Components/Profile/ProfileContainer'
 import Home from './Components/HomePage/Home';
