@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
+// @ts-ignore
 import Paginator from '../common/Paginator/Paginator.tsx';
 import User from './User.js';
+// @ts-ignore
 import s from './Users.module.css';
 import { UserType } from '../../types/types';
 
@@ -11,8 +13,8 @@ type Props = {
     onPageChanged: (pageNumber: number) => void
     users: Array<UserType>
     followingInProgress: Array<number>
-    unfollow: () => void
-    follow: () => void
+    unfollow: (userId: number) => void
+    follow: (userId: number) => void
 
 }
 
