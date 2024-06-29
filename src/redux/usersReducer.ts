@@ -1,4 +1,5 @@
-import { usersAPI } from "../api/api";
+// @ts-ignore
+import { usersAPI } from "../api/api.ts";
 import { updateObjectInArray } from "../utils/object-helpers";
 import { UserType } from "../types/types";
 import { AppStateType } from "./redux-store";
@@ -125,7 +126,7 @@ const _followUnfollowFlow = async (dispatch: DispatchType, userId: number, apiMe
     dispatch(toggleFollowingProgress(true, userId));
     let response = await apiMethod(userId);
 
-    if (response.data.resultCode === 0) {
+    if (response.data.resultCode == 0) {
         dispatch(actionCreator(userId));
     }
     dispatch(toggleFollowingProgress(false, userId));
